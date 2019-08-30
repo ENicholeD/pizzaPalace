@@ -1,6 +1,5 @@
-function CustomPizza(toppings, price){
-  this.toppings = toppings;
-  this.price = 7;
+function CustomPizza(price){
+  this.price = 2;
 }
 
 CustomPizza.prototype.pizzaPrice = function(toppingNumber){

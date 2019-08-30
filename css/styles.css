@@ -14,13 +14,13 @@ body {
  font-family: sans;
  margin-left: 30%;
  margin-right: 30%;
-
+ color: #664c60;
 }
 h1{
    font-size: 100px;
 }
 .col-md-3{
-  border: #b2c888 solid 4px;
+  border: #b2c87f solid 4px;
   background-image: url("../img/order.jpg");
   margin: auto;
   font-weight: bold;
@@ -49,5 +49,7 @@ button{
 }
 h4{
   font-weight: bold;
-  color: yellow;
+  font-family: sans;
+  font-size: 50px;
+  color: #ff3f9f;
 }
