@@ -8,7 +8,7 @@ CustomPizza.prototype.pizzaPrice = function(toppingNumber){
 }
 
 $(document).ready(function(){
-  $("#finishedPizza").hide();
+  $(".col-md-4").hide();
   $(".form").submit(function(event){
     event.preventDefault();
     var crust = $("input:radio[name=crust]:checked").val();
@@ -26,7 +26,7 @@ $(document).ready(function(){
       newPizza.pizzaPrice(toppingNumber);
 
       $("#cost").text(newPizza.price + size);
-      $("#finishedPizza").show();
+      $(".col-md-4").show();
     }
   });
 });
