@@ -26,7 +26,7 @@ Pizza.prototype.checkoutTotal = function(){
   this.total = amount;
   return this.total;
 }
-function CustomPizza(crust, sauce, toppings){
+function CustomPizza(toppings){
   this.toppings = toppings,
   this.price = 0
 }
@@ -36,12 +36,29 @@ CustomPizza.prototype.addToppings = function(toppingsAdded){
 CustomPizza.prototype.pizzaPrice = function(){
   this.price = this.toppings.length * 2 + 7;
 }
-
-var order = new PizzaList();
+function DisplayPizzas(checkout){
+  var listPizza = ("#pizzaList");
+  var htmlPizzaDisplay = "";
+  checkout.items.forEach(function(item){
+    htmlPizzaDisplay += buildDisplay(item);
+  });
+  listPizza.html(htmlPizzaDisplay);
+  $("#cost").text(checkout.total);
+}
 
 $(document).ready(function(){
+  var order = new PizzaList();
+
   $(".form").submit(function(){
-    var = $("input:radio[name=crust]:checked").val();
-    var = $("input:radio[name=sauce]:checled").val();
+    var crust = $("input:radio[name=crust]:checked").val();
+    var sauce = $("input:radio[name=sauce]:checked").val();
+    var topping = $("input:checkbox[name=topping]:checked").val();
+
+    if (crust, sauce){
+      var newPizza = new CustomPizza(topping);
+      newPizza.addToppings;
+      newPizza.pizzaPrice;
+      order.addPizza;
+    }
   });
 });
