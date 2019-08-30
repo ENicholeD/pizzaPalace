@@ -53,3 +53,24 @@ h4{
   font-size: 50px;
   color: #ff3f9f;
 }
+#knight1, #knight2, #love, #dead{
+  width: 300px;
+}
+#knight1{
+  float: left;
+}
+#knight2{
+  float: right;
+}
+#bear{
+  display: block;
+  margin: auto;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15%;
+}
+#love, #dead{
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15%;
+}
