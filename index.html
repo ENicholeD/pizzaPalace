@@ -12,7 +12,7 @@
     <div class="container">
       <form class="form" action="index.html" method="post">
         <div class=row>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h3>Crust</h3>
           <input type="radio" name="crust" value="Thin crust"> Thin crust
           <br>
@@ -38,7 +38,7 @@
           <br>
           <input type="radio" name="crust" value="NY style crust"> NY style crust
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h3>Sauce</h3>
           <input type="radio" name="sauce" value="No sauce"> No sauce
           <br>
@@ -64,7 +64,7 @@
           <br>
           <input type="radio" name="sauce" value="Pepper Jelly sauce"> Pepper Jelly sauce
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h3>Toppings</h3>
           <input type="checkbox" name="topping" value="cheese"> Cheese
           <br>
@@ -91,9 +91,15 @@
           <input type="checkbox" name="topping" value="Green Pepper"> Green Pepper
         </div>
         </div>
+        <br>
         <button type="submit" name="button">Add Pizza</button>
       </form>
     </div>
-    <h4>your pizza is $<span id="cost"></span>!</h4>
+    <br>
+    <div class="row">
+      <div id="finishedPizza">
+        <h4>your pizza is $<span id="cost"></span>!</h4>
+      </div>
+    </div>
   </body>
 </html>

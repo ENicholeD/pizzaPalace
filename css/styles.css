@@ -1,0 +1,13 @@
+#finishedPizza{
+  display: block;
+  margin: auto;
+}
+button{
+  display: block;
+  margin: auto;
+}
+.col-md-3{
+  border: yellow solid 4px;
+  background: lightyellow;
+  margin: auto;
+}
