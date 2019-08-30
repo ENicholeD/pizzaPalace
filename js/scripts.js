@@ -52,10 +52,6 @@ $(document).ready(function(){
       newPizza.addToppings;
       newPizza.pizzaPrice;
       order.addPizza;
-      $("#crustChoice").text(crust);
-      $("#sauceChoice").text(sauce);
-      $("#topping").text(topping);
-      $("#price").text("$" + order.price);
     }
   });
 });
