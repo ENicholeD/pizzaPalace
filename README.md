@@ -12,8 +12,6 @@ This program is meant for the user to create a pizza. I made this for my 4th wee
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| picked pizza crust gives a base price | "Gluten Free" | $5 |
-| sauce choice adds to the base price | "white sauce" | base price is now $7 |
 | picked toppings get stored into an array | "Pepperoni, Cheese, Anchovies" | ["pepperoni", "cheese", "anchovies"] |
 | topping price is determined by the length of the array times 2 | array length is 3 | the overall price for the toppings is $6 |
 | topping price and the base price are added together to get the pizza price | $7 + $6 | $13 |

@@ -18,3 +18,30 @@ PizzaList.prototype.removePizza = function(){
     }
   }
 }
+Pizza.prototype.checkoutTotal = function(){
+  var amount = 0;
+  this.items.forEach(function(item){
+    amount += item.price;
+  });
+  this.total = amount;
+  return this.total;
+}
+function CustomPizza(crust, sauce, toppings){
+  this.toppings = toppings,
+  this.price = 0
+}
+CustomPizza.prototype.addToppings = function(toppingsAdded){
+  this.toppings = toppingsAdded.concat(this.Toppings);
+}
+CustomPizza.prototype.pizzaPrice = function(){
+  this.price = this.toppings.length * 2 + 7;
+}
+
+var order = new PizzaList();
+
+$(document).ready(function(){
+  $(".form").submit(function(){
+    var = $("input:radio[name=crust]:checked").val();
+    var = $("input:radio[name=sauce]:checled").val();
+  });
+});
