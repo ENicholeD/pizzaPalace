@@ -15,12 +15,8 @@ This program is meant for the user to create a pizza. I made this for my 4th wee
 | picked toppings get stored into an array | "Pepperoni, Cheese, Anchovies" | ["pepperoni", "cheese", "anchovies"] |
 | topping price is determined by the length of the array times 2 | array length is 3 | the overall price for the toppings is $6 |
 | topping price and the base price are added together to get the pizza price | $7 + $6 | $13 |
-| user adds another completed pizza to add to their checkout total | pizza1= $13, Pizza2 = $15 | The checkout price becomes $28 |
-| user decides to remove the $15 pizza | user presses a button which is attached to the pizza's id and tells it that the user wants to delete it | the pizza is deleted and removed from the checkout price which becomes $13 |
-| choose pickup to avoid getting the delivery fee | $0 | the total is still $13 |
-| choose delivery and adds it to the total price | $28 + $4 | the new total is $17 |
-| User adds their name address to display on their receipt  | "Fred Marcus", "1234 pizza st.", "notARealPlace", "fakeState", "54321" | "Fred Marcus of 1234 pizza st., notARealPlace fakeState 54321, your total is $17" |
-
+| user selects a pizza size which has it's own price amount | "slice" | $1 |
+| adds the size price to the pizza price | $13 + $1 | $14 |
 ## Setup Instructions
 
 * type in https://magpiemortician.github.io/pizzaPalace/ into your browser
