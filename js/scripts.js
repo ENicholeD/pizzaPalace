@@ -1,66 +1,12 @@
-function PizzaList(){
-  this.items = [],
-  this.total = 0,
-  this.currentId = 0
-}
-PizzaList.prototype.assignId = function(){
-  this.currentId += 1;
-  return this.currentId;
-}
-PizzaList.prototype.addPizza = function(pizza){
-  pizza.id = this.assignId();
-  this.items.push(pizza);
-}
-PizzaList.prototype.removePizza = function(){
-  for (var i = 0; i < this.items.length; i + 1){
-    if(this.items[i].id === id){
-      this.items.splice(this.items.indexOf(this.items[i], 1))
-    }
-  }
-}
-PizzaList.prototype.checkoutTotal = function(){
-  var amount = 0;
-  this.items.forEach(function(item){
-    amount += item.price;
-  });
-  this.total = amount;
-  return this.total;
-}
 function CustomPizza(toppings){
-  this.toppings = toppings,
+  this.toppings = [],
   this.price = 0
 }
 CustomPizza.prototype.addToppings = function(toppingsAdded){
   this.toppings = toppingsAdded.concat(this.Toppings);
 }
 CustomPizza.prototype.pizzaPrice = function(){
-  this.price = this.toppings.length * 2 + 7;
-}
-
-function createDisplay(checkout){
-var listPizzas = $("#pizzas");
-var htmlPizzas = "";
-  checkout.items.forEach(function(item){
-    htmlPizzas += builtPizzaDisplay(item);
-  });
-}
-function buildTicketCard(item){
-  var markup = `
-        <div id="$ID$" class="card">
-          <div class="card-body">
-            <button class="remove" type="button">X</button>
-            <div class="card-text"><strong>$CRUST$</strong></div>
-            <div class="card-text">$SAUCE$</div>
-            <div class="card-text">$TOPPING$</div>
-            <div class="card-text">$$COST$</div>
-          </div>
-        </div>
-        `
-  markup = markup.replace("$ID$", item.id);
-  markup = markup.replace("$TOPPING$", item.toppings);
-  markup = markup.replace("$COST$", item.price);
-
-  return markup;
+  this.price = (this.toppings.length * 2) + 7;
 }
 
 $(document).ready(function(){
@@ -75,10 +21,8 @@ $(document).ready(function(){
       var newPizza = new CustomPizza(topping);
       newPizza.addToppings;
       newPizza.pizzaPrice;
-      order.addPizza;
-      createDisplay(order);
-      markup = markup.replace("$CRUST$", crust);
-      markup = markup.replace("$SAUCE$", sauce);
+      console.log(topping);
+      $("#cost").text(newPizza.price);
     }
   });
 });
