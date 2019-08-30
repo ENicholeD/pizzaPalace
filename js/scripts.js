@@ -1,28 +1,26 @@
-function CustomPizza(toppings){
-  this.toppings = [],
-  this.price = 0
+function CustomPizza(toppings, price){
+  this.toppings = toppings;
+  this.price = price;
 }
-CustomPizza.prototype.addToppings = function(toppingsAdded){
-  this.toppings = toppingsAdded.concat(this.Toppings);
-}
-CustomPizza.prototype.pizzaPrice = function(){
-  this.price = (this.toppings.length * 2) + 7;
+CustomPizza.prototype.pizzaPrice = function(toppingNumber){
+  this.total = toppingNumber += this.price;
 }
 
 $(document).ready(function(){
-  var order = new PizzaList();
 
   $(".form").submit(function(event){
-    event.preventDefault();
     var crust = $("input:radio[name=crust]:checked").val();
     var sauce = $("input:radio[name=sauce]:checked").val();
-    var topping = $("input:checkbox[name=topping]:checked").val();
+    event.preventDefault();
+    var newPizza = new CustomPizza(allToppings);
     if (crust, sauce){
-      var newPizza = new CustomPizza(topping);
+      var addOns = $("input:checkbox[name=topping]:checked").map(function(){ return this.value;}).get();
+      var allToppings = [];
+      (allToppings).push(addOns);
+      var toppingNumber = allToppings[0].length;
       newPizza.addToppings;
       newPizza.pizzaPrice;
-      console.log(topping);
-      $("#cost").text(newPizza.price);
+      $("#cost").text(newPizza.pice);
     }
   });
 });
