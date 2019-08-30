@@ -43,19 +43,19 @@ $(document).ready(function(){
   var order = new PizzaList();
 
   $(".form").submit(function(event){
+    event.preventDefault();
     var crust = $("input:radio[name=crust]:checked").val();
     var sauce = $("input:radio[name=sauce]:checked").val();
     var topping = $("input:checkbox[name=topping]:checked").val();
-    event.preventDefault();
     if (crust, sauce){
       var newPizza = new CustomPizza(topping);
       newPizza.addToppings;
       newPizza.pizzaPrice;
       order.addPizza;
+      $("#crustChoice").text(crust);
+      $("#sauceChoice").text(sauce);
+      $("#topping").text(topping);
+      $("#price").text("$" + order.price);
     }
-    $("#crust").text(crust);
-    $("#sauce").text(sauce);
-    $("#topping").text(topping);
-    // $("#price").text("$" + order.price);
   });
 });
