@@ -37,7 +37,31 @@ CustomPizza.prototype.pizzaPrice = function(){
   this.price = this.toppings.length * 2 + 7;
 }
 
+function createDisplay(checkout){
+var listPizzas = $("#pizzas");
+var htmlPizzas = "";
+  checkout.items.forEach(function(item){
+    htmlPizzas += builtPizzaDisplay(item);
+  });
+}
+function buildTicketCard(item){
+  var markup = `
+        <div id="$ID$" class="card">
+          <div class="card-body">
+            <button class="remove" type="button">X</button>
+            <div class="card-text"><strong>$CRUST$</strong></div>
+            <div class="card-text">$SAUCE$</div>
+            <div class="card-text">$TOPPING$</div>
+            <div class="card-text">$$COST$</div>
+          </div>
+        </div>
+        `
+  markup = markup.replace("$ID$", item.id);
+  markup = markup.replace("$TOPPING$", item.toppings);
+  markup = markup.replace("$COST$", item.price);
 
+  return markup;
+}
 
 $(document).ready(function(){
   var order = new PizzaList();
@@ -52,6 +76,9 @@ $(document).ready(function(){
       newPizza.addToppings;
       newPizza.pizzaPrice;
       order.addPizza;
+      createDisplay(order);
+      markup = markup.replace("$CRUST$", crust);
+      markup = markup.replace("$SAUCE$", sauce);
     }
   });
 });
