@@ -20,7 +20,7 @@ h1{
    font-size: 100px;
 }
 .col-md-3{
-  border: green solid 4px;
+  border: #b2c888 solid 4px;
   background-image: url("../img/order.jpg");
   margin: auto;
   font-weight: bold;
@@ -39,9 +39,15 @@ button{
 }
 .col-md-4{
   display: block;
+  background-image: url("../img/complete.jpg");
+  background-size: cover;
+  border: #ff7ecc solid 5px;
   margin: auto;
-  background-color: teal;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
+}
+h4{
+  font-weight: bold;
+  color: yellow;
 }
